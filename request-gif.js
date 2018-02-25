@@ -21,8 +21,18 @@ function fetchAndDisplayGif(event) {
     // get the user's input text from the DOM
     var searchQuery = $("input[name='tag']").val(); // TODO should be e.g. "dance"
     var gifDisplay = $('#gif');
-    console.log(searchQuery);
+    var riddle = $("input[name='bot_check']").val();
+    //console.log(riddle);
+    var notValid = "";
 
+    if ((riddle != 5) || (searchQuery == "")) {
+        notValid = "Please enter a search item and answer the riddle."
+        $('#feedback').text(notValid).css("color", "red");
+        $("input[name='bot_check']").css("border-color", "red");
+        setGifLoadedStatus(false);
+        return;
+    }
+    
     // configure a few parameters to attach to our request
     var params = { 
         api_key: "dc6zaTOxFJmzC", 
@@ -62,7 +72,9 @@ function fetchAndDisplayGif(event) {
     
     // TODO
     // give the user a "Loading..." message while they wait
-    
+    $('#feedback').text("Loading...");
+    setGifLoadedStatus(false);
+   
 }
 
 
