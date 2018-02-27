@@ -7,32 +7,35 @@
 
 </head>
 <body>
-<div class="container">
-    <h1 class="page-header text-center">The AJAXson 5</h1>
+    <div class="container">
+        <h1 class="page-header text-center">The AJAXson 5</h1>
 
-    <div class="row-align-items">
-        <form id="form-gif-request">
-        <div class="card card-block">
-            <div class="col-6">What kind of Jackson 5 related gif do you want?
-            <input class="form-control" name="tag" type="text"/></div>
+        <div class="row-align-items">
+            <form id="form-gif-request">
+            <div class="card col-xs-6 col-lg-8">
+                <div class="form-inline">
+                    <label>What kind of Jackson 5 related gif do you want?</label><br>
+                    <input class="col-8" name="tag" type="text"/>
+                </div>
+            </div><br>
+            <div class="card col-xs-6 col-lg-8">
+                <div class="form-inline">
+                    <br><label>Answer this riddle to get Jackson-related gifs:</label><br>
+                    <div class="form-control">
+                        <input class="input-group-addon col-6" name="bot_check" type="text" />
+                        <span class="input-group-addon"> Jacksons are better than 1</span>
+                    </div>
+                </div>
+            </div><br>
+                <input class="btn btn-primary" type="submit" value="Get my Gif!" />
+            </form>
         </div><br>
-        <div class="card card-block">
-        <div class="input-group col-8">
-            <br>Answer this riddle to get Jackson-related gifs:<br>
-            <div class="form-control">
-            <input class="input-group-addon" name="bot_check" type="text" />
-            <span class="input-group-addon"> Jacksons are better than 1</span></div>
-            <br>
-        </div></div>
-            <input class="btn btn-primary" type="submit" value="Get my Gif!" />
-        
-        </form>
-    </div>
 
-    
-    <img id="gif" src="" hidden="true" class="img-responsive"/>
-    <p id="feedback" hidden="true`"></p>
-</div>
+        <div class="row justify-content-center">
+            <img id="gif" src="" hidden="true" class="img-fluid"/>
+            <p id="feedback" hidden="true"></p>
+        </div>
+    </div>
 
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript" src="request-gif.js"></script>
